@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Carson Holmes Foundation enables neurodivergent people to thrive, lead and fulfil their potential.">
+  <title>The Carson Holmes Foundation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0c1d36;
+      --coral: #e64b3c;
+      --cream: #faf6f0;
+      --muted: rgba(250, 246, 240, 0.72);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Figtree", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .brand-shape {
+      position: absolute;
+      z-index: -1;
+      top: -35rem;
+      right: -10rem;
+      width: min(46rem, 62vw);
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: clamp(3rem, 8vh, 6rem) 1.5rem clamp(3rem, 7vh, 5rem);
+      text-align: center;
+    }
+
+    .content {
+      width: min(930px, 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: min(264px, 58vw);
+      height: auto;
+      margin-bottom: clamp(2.5rem, 6vh, 4.75rem);
+    }
+
+    h1 {
+      max-width: 930px;
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.35rem, 5.7vw, 5.25rem);
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .potential {
+      display: inline-block;
+      color: var(--coral);
+      font-family: var(--sans);
+      font-size: 0.94em;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      margin-top: clamp(2.4rem, 6vh, 4.5rem);
+      padding: 1rem 1.7rem;
+      border: 2px solid var(--coral);
+      border-radius: 999px;
+      background: var(--coral);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: transparent;
+      color: var(--cream);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid var(--cream);
+      outline-offset: 5px;
+    }
+
+    footer {
+      width: min(1180px, calc(100% - 3rem));
+      margin: 0 auto;
+      padding: 1.45rem 0 1.7rem;
+      border-top: 1px solid rgba(250, 246, 240, 0.22);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.25rem 2rem;
+      align-items: end;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .footer-contact,
+    .footer-legal {
+      margin: 0;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--cream);
+    }
+
+    .footer-strapline {
+      margin: 0 0 0.45rem;
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .footer-strapline strong {
+      color: var(--coral);
+      font-weight: 600;
+    }
+
+    .footer-legal {
+      text-align: right;
+    }
+
+    @media (max-width: 720px) {
+      .brand-shape {
+        top: -26rem;
+        right: -14rem;
+        width: 34rem;
+      }
+
+      main {
+        padding-top: 3rem;
+      }
+
+      .logo {
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: clamp(2.15rem, 10vw, 3.35rem);
+        line-height: 1.08;
+      }
+
+      footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-legal {
+        text-align: center;
+      }
+    }
+
+    @media (max-height: 700px) and (min-width: 721px) {
+      main {
+        padding-top: 3rem;
+        padding-bottom: 2.5rem;
+      }
+
+      .logo {
+        margin-bottom: 2.5rem;
+      }
+
+      .button {
+        margin-top: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img class="brand-shape" src="brand-shape.svg" alt="" aria-hidden="true">
+
+    <main>
+      <section class="content" aria-labelledby="main-heading">
+        <img class="logo" src="TCHF.svg" alt="The Carson Holmes Foundation">
+        <h1 id="main-heading">
+          Enabling neurodivergent people to thrive, lead and fulfil their
+          <span class="potential">potential.</span>
+        </h1>
+        <a class="button" href="mailto:info@carsonholmesfoundation.org">Contact us</a>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p class="footer-strapline">Rooted in support. <strong>Reaching for change.</strong></p>
+        <p class="footer-contact">
+          <a href="https://www.carsonholmesfoundation.org">www.carsonholmesfoundation.org</a><br>
+          <a href="mailto:info@carsonholmesfoundation.org">info@carsonholmesfoundation.org</a><br>
+          <a href="tel:+441564642019">+44 (0)1564 642019</a> · Henley-in-Arden, United Kingdom
+        </p>
+      </div>
+      <p class="footer-legal">The Carson Holmes Foundation is a registered charity in England and Wales.<br>Charity number 1216874.</p>
+    </footer>
+  </div>
+</body>
+</html>
